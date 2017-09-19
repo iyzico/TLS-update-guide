@@ -13,7 +13,7 @@ Python 2.6 will not be supported in March 2018 for TLS 1.2 migration. Please upg
 
 ## Ruby
 
-Ruby 1.9.3 will not be supported in March 2018 for TLS 1.2 migration. Please upgrade your Ruby version to minimum 2.0.0. Latest [iyzipay-ruby](https://github.com/iyzico/iyzipay-ruby)  library required after python update.
+Ruby 1.9.3 will not be supported in March 2018 for TLS 1.2 migration. Please upgrade your Ruby version to minimum 2.0.0. Latest [iyzipay-ruby](https://github.com/iyzico/iyzipay-ruby)  library required after ruby update.
 
 ## Java
 
