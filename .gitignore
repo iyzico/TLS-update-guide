@@ -1,0 +1,13 @@
+# java
+*.class
+
+# net
+*.user
+*.suo
+*.pdb
+.vs
+bin
+obj
+
+# Misc
+.DS_Store
