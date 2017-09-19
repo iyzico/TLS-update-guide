@@ -5,7 +5,7 @@ The Payment Card Industry Security Standards Council (PCI SSC) [mandates](https:
 As part of this requirement, iyzico is making this upgrade and updating all services to require TLS 1.2 for all HTTPS connections.
 
 
-# Update Guide for Iyzico Merchants
+# Update Guide for iyzico Merchants
 
 ## Python
 
@@ -27,7 +27,7 @@ Latest [iyzipay-java](https://github.com/iyzico/iyzipay-java) library required. 
 
 ### Java 1.6
 
-TLS v1.2 is not officially supported for public Oracle JDK 6 releases but Oracle JDK update 121 paid-for release should be used. Latest [iyzipay-java](https://github.com/iyzico/iyzipay-java) library required. Iyzico prefers upgrading to Java 1.7 or Java 1.8.
+TLS v1.2 is not officially supported for public Oracle JDK 6 releases but Oracle JDK update 121 paid-for release should be used. Latest [iyzipay-java](https://github.com/iyzico/iyzipay-java) library required. iyzico prefers upgrading to Java 1.7 or Java 1.8.
 
 ### Java 1.5
 
