@@ -69,6 +69,22 @@ TLS v1.2 is not officially supported for public Oracle JDK 6 releases but Oracle
 
 TLS v1.2 is not supported.
 
+### Sample Code to Test iyzipay-java TLS 1.2 update
+
+```java
+    @Test
+    public void should_test_tls_12_update() {
+        options = new Options();
+        options.setBaseUrl("https://sandbox-api-tls12.iyzipay.com");
+
+        IyzipayResource iyzipayResource = ApiTest.retrieve(options);
+
+        System.out.println(iyzipayResource);
+
+        assertEquals(Status.SUCCESS.getValue(), iyzipayResource.getStatus());
+    }
+```
+
 ## .NET
 
 Latest [iyzipay-dotnet](https://github.com/iyzico/iyzipay-dotnet) library required. 
