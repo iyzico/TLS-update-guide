@@ -91,7 +91,7 @@ Latest [iyzipay-dotnet](https://github.com/iyzico/iyzipay-dotnet) library requir
  
 ### Sample Code to Test iyzipay-dotnet TLS 1.2 update
 
-```dotnet
+```csharp
 [Test]
 public void Should_Test_TLS_12_Update()
 {
