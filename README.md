@@ -86,7 +86,7 @@ public void should_test_tls_12_update() {
 
 ## .NET
 
-Latest [iyzipay-dotnet](https://github.com/iyzico/iyzipay-dotnet) library required.
+Latest [iyzipay-dotnet](https://github.com/iyzico/iyzipay-dotnet) library required. No code change is required.
  
 ### Sample Code to Test iyzipay-dotnet TLS 1.2 update
 
@@ -101,7 +101,30 @@ public void Should_Test_TLS_12_Update()
    
    PrintResponse<IyzipayResource>(iyzipayResource);
    Assert.AreEqual(Status.SUCCESS.ToString(), iyzipayResource.Status);
-}
+}<<<<
+```
+
+## Node
+
+Latest [iyzipay-node](https://github.com/iyzico/iyzipay-node) library required. No code change is required.
+ 
+### Sample Code to Test iyzipay-node TLS 1.2 update
+
+```javascript
+describe('TLSv_1_2Test', function () {
+
+        it('should test tls v1.2 secure protocol', function (done) {
+            options.uri = 'https://sandbox-api-tls12.iyzipay.com/';
+
+            var iyzipay = iyzipay = new Iyzipay(options);
+            iyzipay.apiTest.retrieve({}, function (err, result) {
+                result.should.not.null;
+                result.status.should.be.equal('success');
+                result.systemTime.should.not.null;
+                done();
+            });
+        });
+});
 ```
 
 # Testing
