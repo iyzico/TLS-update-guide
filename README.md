@@ -11,9 +11,45 @@ As part of this requirement, iyzico is making this upgrade and updating all serv
 
 Python 2.6 will not be supported in March 2018 for TLS 1.2 migration. Please upgrade your Python version to minimum 2.7.9. Latest [iyzipay-python](https://github.com/iyzico/iyzipay-python)  library required after python update.
 
+### Sample Code to Test iyzipay-python TLS 1.2 update
+
+```python
+import iyzipay
+
+options = {
+    'base_url': 'sandbox-api-tls12.iyzipay.com'
+}
+
+api_test = iyzipay.ApiTest().retrieve(options)
+
+print(api_test.read().decode('utf-8'))
+```
+
 ## Ruby
 
 Ruby 1.9.3 will not be supported in March 2018 for TLS 1.2 migration. Please upgrade your Ruby version to minimum 2.0.0. Latest [iyzipay-ruby](https://github.com/iyzico/iyzipay-ruby)  library required after ruby update.
+
+### Sample Code to Test iyzipay-ruby TLS 1.2 update
+
+```ruby
+RSpec.describe 'Iyzipay' do
+  before :all do
+    @options = Iyzipay::Options.new
+    @options.base_url = 'https://sandbox-api-tls12.iyzipay.com/'
+  end
+
+  it 'should test tls 1.2 support' do
+    api_test = Iyzipay::Model::ApiTest.new.retrieve(@options)
+    begin
+      api_test = JSON.parse(api_test)
+      expect(api_test['status']).to eq('success')
+    rescue
+      $stderr.puts 'oops'
+      raise
+    end
+  end
+end
+```
 
 ## Java
 
