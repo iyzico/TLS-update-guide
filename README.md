@@ -76,11 +76,10 @@ TLS v1.2 is not supported.
 public void should_test_tls_12_update() {
    Options options = new Options();
    options.setBaseUrl("https://sandbox-api-tls12.iyzipay.com");
-
+   
    IyzipayResource iyzipayResource = ApiTest.retrieve(options);
-
+   
    System.out.println(iyzipayResource);
-
    assertEquals(Status.SUCCESS.getValue(), iyzipayResource.getStatus());
 }
 ```
@@ -97,7 +96,9 @@ public void Should_Test_TLS_12_Update()
 {
    Options options = new Options();
    options.BaseUrl = "https://sandbox-api-tls12.iyzipay.com";
+   
    IyzipayResource iyzipayResource = ApiTest.Retrieve(options);
+   
    PrintResponse<IyzipayResource>(iyzipayResource);
    Assert.AreEqual(Status.SUCCESS.ToString(), iyzipayResource.Status);
 }
