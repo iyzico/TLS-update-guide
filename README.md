@@ -101,7 +101,7 @@ public void Should_Test_TLS_12_Update()
    
    PrintResponse<IyzipayResource>(iyzipayResource);
    Assert.AreEqual(Status.SUCCESS.ToString(), iyzipayResource.Status);
-}<<<<
+}
 ```
 
 ## Node
