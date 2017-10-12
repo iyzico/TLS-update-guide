@@ -134,20 +134,12 @@ PHP environment with openssl 1.0.0 will not be supported in March 2018 for TLS 1
 ### Sample Code to Test iyzipay-php TLS 1.2 update
 
 ```php
-use Iyzipay\ApiResource;
-use Iyzipay\Model\Locale;
+require_once("Config.php");
 
-class TLSv12Test extends \PHPUnit_Framework_TestCase
-{
-    public function test_function_should_get_success_response()
-    {
-        $rawResponse = ApiResource::httpClient()->get("https://sandbox-api-tls12.iyzipay.com/payment/test");
-        $jsonResponse = json_decode($rawResponse,true);
-        $this->assertEquals("success", $jsonResponse["status"]);
-        $this->assertEquals(Locale::TR, $jsonResponse["locale"]);
-        $this->assertNotNull($jsonResponse["systemTime"]);
-    }
-}
+$options = Config::options();
+$options->setBaseUrl("https://sandbox-api-tls12.iyzipay.com");
+
+$iyzipayResource = \Iyzipay\Model\ApiTest::retrieve($options);
 ```
 
 # Testing
